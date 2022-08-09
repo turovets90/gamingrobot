@@ -210,6 +210,7 @@ ul
 
 body
   background: #F8F8F8
+  position: relative
   padding: 0
   margin: 0
   color: $text_color
@@ -227,6 +228,524 @@ body
   margin-left: auto
   margin-right: auto
 
+header
+  //background: #FFF3EB
+  +border-radius(0 0 16px 16px)
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 999
+  padding: 9px 0
+  @media (max-width: 991px)
+    padding: 5px 0
+  @media (max-width: 767px)
+    padding: 17px 0
+    background: #FFF3EB
+    +border-radius(0)
+
+
+
+
+.m_header
+  @media (min-width: 768px)
+    display: none
+  width: 100%
+  +flex
+  +ai-center
+  +j-center
+  position: relative
+.mm_btn
+  position: absolute
+  right: 10px
+  top: 0
+  bottom: 0
+  margin: auto
+  .hamburger
+    width: 20px
+    height: 20px
+    position: relative
+    background: none
+    border: 0
+    span
+      position: absolute
+      width: 100%
+      height: 4px
+      left: 0
+      background: $orange
+      +border-radius(5px)
+      +transition($transition_default)
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 0
+        bottom: 0
+        margin: auto
+      &:nth-child(3)
+        bottom: 0
+
+
+.page-noscroll
+  overflow: hidden
+  body
+    overflow: hidden
+  .mm_btn
+    .hamburger
+      width: 26px
+      height: 26px
+      span
+        &:nth-child(1)
+          top: 11px
+          +transform(rotate(45deg))
+        &:nth-child(2)
+          opacity: 0
+        &:nth-child(3)
+          bottom: 11px
+          +transform(rotate(-45deg))
+
+.mm_menu
+  @media (max-width: 767px)
+    //display: none
+    position: fixed
+    background: #FFF3EB
+    top: 70px
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 27px 18px
+    opacity: 0
+    +transition($transition_default)
+    +transform(translateX(100%))
+    &.open
+      +transform(translateX(0))
+      opacity: 1
+
+
+
+
+
+
+.header_row
+  +flex
+  +ai-center
+  +wrap
+  > div
+    @media (min-width: 1201px)
+      width: 33.33%
+  .col_left
+    @media (max-width: 1200px)
+      width: 40%
+    @media (max-width: 767px)
+      width: 100%
+      margin-bottom: 22px
+  .col_center
+    +flex
+    +ai-center
+    +j-center
+    @media (max-width: 1200px)
+      width: 25%
+    @media (max-width: 767px)
+      display: none
+  .col_right
+    +flex
+    +j-end
+    +ai-center
+    @media (max-width: 1200px)
+      width: 35%
+    @media (max-width: 767px)
+      width: 100%
+      +j-start
+      +wrap
+      .btn
+        width: 100%
+        max-width: 100%
+        background: #FF9040
+        color: #fff
+
+
+
+.menu
+  +flex
+  +wrap
+
+
+  li
+    position: relative
+    @media (max-width: 767px)
+      width: 100%
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+
+    &.has_child
+      @media (min-width: 992px)
+        &:hover
+          .sub-menu
+            display: block
+          > a
+            &:after
+              +transform(rotate(-180deg))
+
+      > a
+        //padding-right: 25px
+        &:after
+          content: ''
+          display: inline-block
+          margin-left: 10px
+          width: 14px
+          height: 9px
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5L7 7.5L13 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+          //+transition($transition_default)
+          @media (max-width: 767px)
+            display: none
+
+
+    a
+      text-decoration: none
+      color: #fff
+      font-size: 16px
+      font-weight: 700
+      display: inline-block
+      position: relative
+      padding: 16px
+      @media (min-width: 768px)
+        @media (max-width: 991px)
+          padding: 10px
+          font-size: 14px
+      @media (max-width: 767px)
+        color: #000
+        padding: 0
+        font-size: 20px
+
+  .sub-menu
+    @media (min-width: 768px)
+      min-width: 252px
+      position: absolute
+      display: none
+    @media (max-width: 767px)
+      padding-top: 18px
+    li
+      @media (max-width: 767px)
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+      a
+        @media (max-width: 767px)
+          padding: 0
+          font-size: 14px
+          font-family: $font_regular
+
+
+.sub-menu
+  li
+    a
+      font-size: 14px
+      padding: 5px 10px
+      color: #000
+
+.dropdown_menu, .sub-menu
+  @media (min-width: 768px)
+    position: absolute
+    background: #fff
+    +border-radius(16px)
+    +box-shadow(0px 4px 16px rgba(135, 135, 135, 0.2))
+    padding: 10px
+
+  a
+    text-decoration: none
+    &:hover, &:focus
+      text-decoration: none
+
+
+.btn
+  +flex
+  +ai-center
+  +j-center
+  font-size: 14px
+  color: #000
+  background: #fff
+  font-family: $font_bold
+  width: 100%
+  max-width: 153px
+  height: 46px
+  +border-radius(12px)
+  text-decoration: none
+  line-height: 1
+  @media (max-width: 991px)
+    max-width: 110px
+
+
+
+.logo
+  a
+    display: inline-block
+    img
+      &.logo_orange
+        display: none
+
+$black: #211D1A
+
+.lang_block
+  padding: 8px 0
+  margin-right: 15px
+  position: relative
+  &:hover
+    @media (min-width: 992px)
+      .sub-menu
+        display: block
+
+      .lang_btn
+        &:after
+          +transform(rotate(-180deg))
+
+  @media (max-width: 767px)
+    +flex
+    +ai-center
+    width: 100%
+    margin-bottom: 20px
+    .sub-menu
+      +flex
+      +ai-center
+      li
+        a
+          width: 81px
+          height: 46px
+          padding: 5px
+          +j-center
+          background: #fff
+          +border-radius(12px)
+
+  .sub-menu
+    @media (min-width: 768px)
+      padding: 5px 0
+      top: 100%
+      display: none
+    li
+      @media (max-width: 767px)
+        margin-left: 15px
+    a
+      +flex
+      +ai-center
+      font-size: 14px
+      color: $black
+      font-family: $font_bold
+      @media (min-width: 768px)
+        padding: 5px 14px
+      img
+        margin-right: 8px
+        color: #000
+  .lang_btn
+    +flex
+    +ai-center
+    +border-radius(12px)
+    padding: 9px 16px
+    border: 2px solid #fff
+    background: none
+    position: relative
+    @media (max-width: 991px)
+      padding: 9px
+    @media (max-width: 767px)
+      width: 81px
+      height: 46px
+      padding: 5px
+      +j-center
+      background: #fff
+    &:after
+      content: ''
+      width: 14px
+      height: 9px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5L7 7.5L13 1.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+      @media (max-width: 767px)
+        display: none
+
+
+    .flag
+      display: inline-block
+      margin-right: 8px
+    span
+      &.txt
+        font-size: 14px
+        color: $black
+        font-family: $font_bold
+        display: inline-block
+        margin-right: 8px
+
+
+/********** end header *************/
+
+
+.first_screen
+  background: url(./img/orange_bg.png)
+  background-size: cover
+  background-position: center
+  width: 100%
+  //height: 100vh
+  //min-height: 820px
+  padding-top: 125px
+  +border-radius(0 0 48px 48px)
+  @media (max-width: 767px)
+    background: #FFF3EB
+
+  .site_title
+    color: #fff
+    font-size: 64px
+    line-height: 64px
+    text-transform: uppercase
+    font-family: $font_bold
+    max-width: 1300px
+    margin-top: 0
+    margin-bottom: 20px
+    @media (max-width: 1440px)
+      font-size: 60px
+      line-height: 60px
+    @media (max-width: 1200px)
+      font-size: 50px
+      line-height: 50px
+    @media (max-width: 991px)
+      font-size: 40px
+      line-height: 40px
+    @media (max-width: 767px)
+      font-size: 28px
+      line-height: 28px
+      color: #000
+      margin-bottom: 10px
+      .orange
+        color: $orange
+      .d_block
+        display: block
+
+
+
+  .sub_title
+    font-size: 20px
+    line-height: 28px
+    font-family: $font_regular
+    color: #fff
+    margin-bottom: 5px
+    @media (max-width: 1440px)
+      font-size: 20px
+      line-height: 28px
+      span
+        display: block
+    @media (max-width: 767px)
+      display: none
+
+  .desc
+    @media (min-width: 768px)
+      display: none
+    font-size: 16px
+    line-height: 23px
+    color: #000
+
+
+  .btn_default
+    max-width: 100%
+
+
+.btn_default
+  +flex
+  +ai-center
+  +j-center
+  font-size: 16px
+  font-family: $font_bold
+  color: #000
+  width: 100%
+  max-width: 340px
+  height: 60px
+  +border-radius(40px)
+  background: #fff
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: none
+
+.adv_list
+  li
+    &:nth-child(2)
+      +flex
+      +j-end
+      position: relative
+      z-index: 1
+    &:nth-child(1)
+      position: relative
+      z-index: 2
+    &:nth-child(3)
+      position: relative
+      z-index: 3
+
+    button
+      display: inline-block
+      border: 0
+      padding: 12px 20px
+      color: #fff
+      font-size: 16px
+      font-family: $font_regular
+      font-weight: 700
+      +border-radius(24px)
+      &.violet
+        background: #7F52FF
+        +box-shadow(0px 2px 12px rgba(0, 0, 0, 0.05))
+        +transform(rotate(-4.95deg) translateY(35px))
+      &.green
+        background: #1FC981
+        +box-shadow( 0px 2px 12px rgba(0, 0, 0, 0.05))
+        +transform(rotate(3.15deg) translateX(30px))
+      &.white
+        border: 2px solid #FFFFFF
+        background: none
+        +transform(rotate(-2.12deg) translateY(2px))
+
+.first_screen_row
+  +flex
+  //+wrap
+  +j-beetween
+  @media (max-width: 767px)
+    +wrap
+  > div
+    //width: 33.33%
+
+  .col_left
+    +flex
+    +col
+    +j-beetween
+    padding-bottom: 70px
+    width: 100%
+    max-width: 386px
+    @media (max-width: 1200px)
+      display: none
+  .col_center
+    +flex
+    +ai-center
+    +j-center
+    @media (max-width: 767px)
+      width: 100%
+      margin-bottom: 10px
+
+    picture
+      width: 100%
+      height: 100%
+      +flex
+      +ai-center
+      +j-center
+      img
+        //max-width: initial
+        &.img_mobile
+          @media (min-width: 1301px)
+            display: none
+        &.img_desktop
+          @media (max-width: 1300px)
+            display: none
+  .col_right
+    +flex
+    +ai-end
+    +j-end
+    width: 100%
+    max-width: 386px
+    padding-bottom: 70px
+    @media (max-width: 767px)
+      width: 100%
+      max-width: 100%
+      +j-center
+      padding-bottom: 45px
 
 
 

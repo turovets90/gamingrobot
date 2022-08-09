@@ -12,10 +12,77 @@
   <body>
     <header>
       <div class="container">
-        <div class="header_row"></div>
+        <div class="m_header">
+          <div class="logo"><a href="#"><img src="../img/logo.svg"/></a></div>
+          <div class="mm_btn">
+            <button class="hamburger"><span></span><span></span><span></span></button>
+          </div>
+        </div>
+        <div class="mm_menu">
+          <div class="header_row">
+            <div class="col_left">
+              <ul class="menu">
+                <li class="has_child"><a href="#">О игрушке</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Зачем нужен UNIQ?</a></li>
+                    <li><a href="#">Как UNIQ это делает?</a></li>
+                    <li><a href="#">Видеообзор</a></li>
+                    <li><a href="#">Технические характеристики</a></li>
+                    <li><a href="#">Подписка UNIQ</a></li>
+                    <li><a href="#">Мобильное приложение</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Отзывы</a>
+                </li>
+                <li><a href="#">Вопросы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col_center">
+              <div class="logo"><a href="#"><img class="logo_white" src="../img/logo_w.svg"/><img class="logo_orange" src="../img/logo.svg"/></a></div>
+            </div>
+            <div class="col_right">
+              <div class="lang_block">
+                <button class="lang_btn"><img class="flag" src="../img/rus.svg"/><span class="txt">Ру</span></button>
+                <ul class="sub-menu">
+                  <li><a href="#"><img class="glag" src="../img/esp.svg"/><span class="txt">Es</span></a></li>
+                  <li><a href="#"><img class="glag" src="../img/us.svg"/><span class="txt">US</span></a></li>
+                </ul>
+              </div><a class="btn" href="#modal">Предзаказ</a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-    <!--include inc/index/content-->
+    <section class="first_screen">
+      <div class="container">
+        <h1 class="site_title"><span class="orange">UNIQ</span> – <span class="d_block">невоображаемый друг для вашего ребенка</span></h1>
+        <p class="sub_title"><span>Детский игровой компаньон</span> с искусственным интеллектом.</p>
+        <div class="desc">
+          <p>Детский игровой компаньон с искусственным интеллектом. Развивает фантазию и обучает через игры.</p>
+          <p>Предназначен для детей-дошкольников от 5 до 7 лет.</p>
+        </div>
+        <div class="first_screen_row">
+          <div class="col_left">
+            <ul class="adv_list">
+              <li>
+                <button class="violet">Развивает фантазию</button>
+              </li>
+              <li>
+                <button class="green">Обучает через игры.</button>
+              </li>
+              <li>
+                <button class="white">Для детей-дошкольников 5-7 лет</button>
+              </li>
+            </ul><a class="btn_default" href="#modal">Узнать больше</a>
+          </div>
+          <div class="col_center">
+            <picture><img class="img_desktop" src="../img/cat.png"/><img class="img_mobile" src="../img/cat_mobile.png"/></picture>
+          </div>
+          <div class="col_right"><img src="../img/Video.png"/></div>
+        </div>
+      </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../js/slick.js"></script>
     <script src="../js/main.js"></script>

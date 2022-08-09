@@ -1,3 +1,50 @@
+-var menu=['О игрушке','Отзывы','Вопросы'];
+-var submenu=['Зачем нужен UNIQ?','Как UNIQ это делает?','Видеообзор','Технические характеристики','Подписка UNIQ','Мобильное приложение'];
 header
     .container
-        .header_row
+        .m_header
+            .logo
+                a(href="#")
+                    img(src=dir + "logo.svg")
+            .mm_btn
+                button.hamburger
+                    span
+                    span
+                    span
+        .mm_menu
+            .header_row
+                .col_left
+                    ul.menu
+                        for menu_item , index in menu
+                            li(class=(index===0)? 'has_child': '')
+                                a(href="#")=menu_item
+                                if index===0
+                                    ul.sub-menu
+                                        for sub_item , index in submenu
+                                            li
+                                                a(href="#")=sub_item
+                .col_center
+                    .logo
+                        a(href="#")
+                            img.logo_white(src=dir+"logo_w.svg")
+                            img.logo_orange(src=dir+"logo.svg")
+                .col_right
+                    .lang_block
+                        button.lang_btn
+                            img.flag(src=dir+'rus.svg')
+                            span.txt Ру
+
+                        ul.sub-menu
+                            li
+                                a(href="#")
+                                    img.glag(src=dir+'esp.svg')
+                                    span.txt Es
+                            li
+                                a(href="#")
+                                    img.glag(src=dir+'us.svg')
+                                    span.txt US
+
+                    a.btn(href="#modal") Предзаказ
+
+
+
