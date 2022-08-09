@@ -1,0 +1,232 @@
+/*!
+  Theme Name: gamingrobot
+  Theme URI: http://underscores.me/
+  Author: Aleksandr Turavets
+  Author URI: https://www.linkedin.com/in/aleksandr-turovets/
+  Description: Description
+  Version: 1.0.0
+  Tested up to: 5.4
+  Requires PHP: 5.6
+  License: GNU General Public License v2 or later
+  License URI: LICENSE
+  Text Domain: gamingrobot
+  Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+  This theme, like WordPress, is licensed under the GPL.
+  Use it to make something cool, have fun, and share what you've learned.
+
+  gamingrobot is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+  Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+  Normalizing styles have been helped along thanks to the fine work of
+  Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+
+@import "./css/slick-less"
+
+=b_a()
+  content: ''
+  position: absolute
+
+=m_a()
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+=flex()
+  display: flex
+  display: -webkit-flex
+
+=j-center()
+  justify-content: center
+  -webkit-justify-content: center
+
+=j-beetween()
+  justify-content: space-between
+  -webkit-justify-content: space-between
+
+=j-space-around()
+  justify-content: space-around
+  -webkit-justify-content: space-around
+
+=j-end()
+  justify-content: flex-end
+  -webkit-justify-content: flex-end
+
+=j-start()
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+
+=ai-center()
+  align-items: center
+  -webkit-align-items: center
+
+=ai-start()
+  align-items: flex-start
+  -webkit-align-items: flex-start
+
+=ai-end()
+  align-items: flex-end
+  -webkit-align-items: flex-end
+
+=as-center()
+  align-self: center
+  -webkit-align-self: center
+
+=as-end()
+  align-self: flex-end
+  -webkit-align-self: flex-end
+
+=as-start()
+  align-self: flex-start
+  -webkit-align-self: flex-start
+
+=wrap()
+  flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+
+=col()
+  flex-direction: column
+  -webkit-flex-direction: column
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=box-shadow($box-shadow)
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
+
+=transform($transform)
+  transform: $transform
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+
+=transition($transition_default)
+  transition: $transition_default
+  -webkit-transition: $transition_default
+  -moz-transition: $transition_default
+  -o-transition: $transition_default
+
+=animation($transition_default)
+  animation: $transition_default
+  -webkit-animation: $transition_default
+  -moz-animation: $transition_default
+  -o-animation: $transition_default
+
+
+@font-face 
+  font-family: 'CorsaGrotesk Thin'
+  src: url('./fonts/CorsaGrotesk-Thin.eot')
+  src: url('./fonts/CorsaGrotesk-Thin.eot?#iefix') format('embedded-opentype'),url('./fonts/CorsaGrotesk-Thin.woff2') format('woff2'), url('./fonts/CorsaGrotesk-Thin.woff') format('woff'), url('./fonts/CorsaGrotesk-Thin.ttf') format('truetype')
+  font-weight: 100
+  font-style: normal
+$font_thin: 'CorsaGrotesk Thin'
+
+@font-face 
+  font-family: 'CorsaGrotesk Regular'
+  src: url('./fonts/CorsaGrotesk-Regular.eot')
+  src: url('./fonts/CorsaGrotesk-Regular.eot?#iefix') format('embedded-opentype'),url('./fonts/CorsaGrotesk-Regular.woff2') format('woff2'), url('./fonts/CorsaGrotesk-Regular.woff') format('woff'),url('./fonts/CorsaGrotesk-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+$font_regular: 'CorsaGrotesk Regular'
+@font-face 
+  font-family: 'GetVoIPGrotesque Italic'
+  src: url('./fonts/GetVoIPGrotesque-Italic.eot')
+  src: url('./fonts/GetVoIPGrotesque-Italic.eot?#iefix') format('embedded-opentype'),url('./fonts/GetVoIPGrotesque-Italic.woff') format('woff'), url('./fonts/GetVoIPGrotesque-Italic.ttf') format('truetype')
+  font-weight: bold
+  font-style: italic
+$font_italic: 'GetVoIPGrotesque Italic'
+@font-face 
+  font-family: 'GetVoIPGrotesque'
+  src: url('./fonts/GetVoIPGrotesque.eot')
+  src: url('./fonts/GetVoIPGrotesque.eot?#iefix') format('embedded-opentype'),url('./fonts/GetVoIPGrotesque.woff') format('woff'), url('./fonts/GetVoIPGrotesque.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+$font_bold: 'GetVoIPGrotesque'
+
+$transition_default: .3s linear
+
+$orange: #FF9040
+$text_color: #000
+
+a, button
+  +transition($transition_default)
+
+a
+  text-decoration: underline
+  &:hover, &:focus
+    text-decoration: none
+
+button, input, .form_control
+  outline: none
+
+.form_control
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
+
+button
+  cursor: pointer
+  &:hover, &:focus
+    +box-shadow(none)
+    outline: none
+
+
+img, video
+  max-width: 100%
+*
+  outline: none
+
+*, *::before, *::after
+  box-sizing: border-box
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+
+*
+  outline: none
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  &::-webkit-scrollbar
+    -webkit-appearance: none
+    width: 0
+  &::-webkit-scrollbar:vertical
+    width: 6px
+    background: #c6c8ca
+  &::-webkit-scrollbar-thumb
+    @include border-radius(4px)
+    background: $orange
+
+
+body
+  background: #F8F8F8
+  padding: 0
+  margin: 0
+  color: $text_color
+  font-family: $font_regular
+  font-size: 16px
+  line-height: 23px
+
+
+
+.container
+  width: 100%
+  max-width: 1532px
+  padding-left: 10px
+  padding-right: 10px
+  margin-left: auto
+  margin-right: auto
+
+
+
+
