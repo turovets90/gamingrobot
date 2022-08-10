@@ -22,3 +22,192 @@ section.first_screen
                     img.img_mobile(src=dir+'cat_mobile.png')
             .col_right
                 img(src=dir+'Video.png')
+
+
+
+
+-var w_title=['','Укрепит воображение','Научится проводить время самостоятельно ','Получит знания об окружающем мире','Разовьет эмоциональный интеллект']
+section.why_need.pb_pt
+    .container
+        .row.why_need_header
+            .col_3
+                .h2 Зачем<br> нужен <span>UNIQ</span>
+            .col_7
+                .desc С самого раннего возраста ребенок учится и познает мир только через игры. Уник - уникальный игровой компаньон, который предлагает бесконечное количество игр, наполненных познавательным контентом.
+
+        .row.why_need_body
+            .col_3
+                p С его помощью ребёнок:
+                img(src=dir+"335748.png")
+            .col_7
+                -for(var n=1;n<=4;n++)
+                    .why_need_item(class="item"+n+"")
+                        .why_need_item_content
+                            .why_need_title=w_title[n]
+                            .why_need_desc
+                                if n===1
+                                    p У Уника есть уникальные сюжетные игры с разнообразными вариантами прохождения. Они никогда не будут повторяться и не наскучат ребенку.
+
+                                    p Полететь в космос, чтобы открыть новые земли.
+                                else if n===2
+                                    p В зависимости от возраста и навыков вашего ребенка меняется сложность, продолжительность и скорость игр, чтобы ребенку всегда было интересно и увлекательно играть.
+                                    p Ребенок может запускать все игры самостоятельно через голосовое управление или NFC карточки.
+                                else if n===3
+                                    p В процессе всех игр ребенок получает и использует знания об окружающем мире в соответствии с его возрастом
+                                else if n===4
+                                    p В этом возрасте очень важно научиться распознавать эмоции как в себе, так и в окружающих.
+                                    p Уник на своем примере покажет и расскажет об эмоциях, отчего они возникают, как к ним относиться и как с ними справляться.
+                        img(src=dir+"why_need/"+n+".gif")
+
+
+-var tooltip=['Поиграем в съедобное / несъедобное?','Lorem Ipsum is simply dummy','when an unknown printer','Lorem Ipsum','Lorem Ipsum'];
+section.block_slider.d_none
+    .container
+        .h2 <span>Uniq</span> – игровой робот-друг с искусственным интеллектом
+        .slider_row
+            .col
+                .slider_image
+                    -for(var q=1;q<=5;q++)
+                        .slider_image_item
+                            picture
+                                span.tooltip=tooltip[q]
+                                img(src=dir+'cat1.png')
+
+            .col
+                .slider_txt
+                    -for(var i=1;i<=5;i++)
+                        .slider_txt_item
+                            .count=i
+                            .title Подстраиваться под возраст ребенка и его интересы
+                            .desc Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком
+
+
+
+section.video_review.pb_pt
+    .container
+        .h2.mb_40 Видеообзор
+        .row
+            .col_3
+                img(src=dir + "335748.png")
+                .video_review_desc
+                    span “Хей, посмотри видео про меня” (Текст от имени игрушки про ее возможности )
+            .col_7
+                .video_container
+                    span.play_btn
+                    video.video(src=dir+'video.mp4')
+
+
+-var what_can=['','Общается и распознает детскую речь','Сопровождает игры звуками и музыкой','Изменяет цвет во время игр','Показывает свои эмоции','Реагирует на прикосновения ','Реагирует на нажатия кнопок и уникальные NFC карточки','Распознает лица и объекты через камеру ','Сопровождает игры картинками на экране','Видеоняня'];
+-var w_desc=['','Уник умеет поддерживать беседу на детские темы, отвечать на вопросы и задавать их. ','Игры Уника наполнены красивой музыкой и разнообразными звуками, позволяя глубже окунутся в мир игры.','RGB-подсветка позволяет легче ориентироваться в правилах игры, а также дает дополнительное погружение. ','В процессе общения Уник может проявлять целый спектр эмоций, развивая эмоциональный интеллект','Мурлычет, если его погладить или почесать за ушком','Тактильно взаимодействует с ребенком.','Определяет, если ребенок улыбается или плачет, узнает животных, фигуры и жесты.','С помощью изображений помогает разнообразить игры и глубже погрузиться в сюжет','Ребенок всегда под присмотром родителя через мобильное приложение'];
+section.what_can
+    .container
+        .row
+            .col_3
+                .h2 что умеет <span>UNIQ</span>
+            .col_7
+                .what_can_list
+                    -for(var w=1;w<=9;w++)
+                        .item(class="item"+w+"")
+                          .what_can_list_item
+                            .what_can_list_item_content
+                                .title=what_can[w]
+                                .sub_title=w_desc[w]
+                            if w===7
+                                .item7_content
+                                    .square
+                                        span
+                                        span
+                                        span
+                                        span
+                                    button Алиса улыбается
+
+                            if w!=7
+                                img(src=dir+"what_can/"+w+".png")
+
+
+
+
+section.prices.pb_pt
+    .container
+        .row
+            .col_6
+                .item.pre_order
+                    .d_flex
+                        .top
+                            .h2 Предзаказ UNIQ
+                        .bottom
+                            .price
+                                .current_price 25 900 ₽
+                                .old_price 55 900 ₽
+                            a.btn_default(href="modal") Предзаказать
+                    .bg
+
+            .col_4
+                .item.subscription
+                    .d_flex
+                        .top
+                            .h2 Подписка <span>UNIQ</span>
+                            .sub_title Включает дополнительный контент для игр с ребенком
+                        .bottom
+                            .price 900 ₽
+                                span / месяц
+                            p.bold При покупке UNIQ первые полгода<br> - подписка <span>бесплатнО</span>
+            .col_10
+                .item.nfc
+                    .h2 Закажи UNIQ и получи <span>набор интерактивных NFC карточек</span>
+                    .sub_title Включает дополнительный контент для игр с ребенком
+
+
+
+
+
+section.reviews.pb_pt
+    .container
+        .h2.mb_40 Отзывы
+        .reviews_list
+            -for(var r=1;r<=3;r++)
+                .item
+                    .review_item
+                        .review_header
+
+                            .review_author(style="background-image:url("+dir+"user.png)")
+                            .review_author_info
+                                .name Александра
+                                .position Учитель английского языка в частной школе
+
+                        .review_body
+                            .txt Как детский психолог я понимаю важность психологической работы со своим ребенком с малого возраста. Правильно выстроенные отношения и глубокая проработка эмоциональной связи помогают вырастить счастливого человека. Также я понимаю, что в наш век скорости у родителей нет времени на изучение профессионального подхода к своим детям. Я очень рада, что теперь есть возможность использовать технологии, созданные благодаря консенсусу нескольких подобных мне профессионалов. Это облегчит жизнь родителям и поможет детям. К тому же это весело и интересно.
+                            span.read_more Читать полностью
+
+
+
+
+section.faq.pb
+    .container
+        .h2.mb_40 Вопросы
+        .row
+            .col_7
+                .faq_list
+                    -for(var f=1;f<=4;f++)
+                        .faq_item
+                            .faq_item_header Во что UNIQ будет играть?
+                            .faq_item_body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            .col_3
+                a.btn_default.orange.desktop(href="#modal") Задать вопрос
+                a.btn_default.orange.mobile(href="#modal") У меня остались вопросы
+
+
+
+
+section.pre_order_bottom.pb
+    .container
+        .pre_order
+            .d_flex
+                .top
+                    .h2 Предзаказ UNIQ
+                .bottom
+                    .price
+                        .current_price 25 900 ₽
+                        .old_price 55 900 ₽
+                    a.btn_default(href="modal") Предзаказать
+            .bg

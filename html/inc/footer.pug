@@ -1,0 +1,29 @@
+-var f_menu=['Зачем нужен UNIQ?','Как UNIQ это делает?','Видеообзор','Технические характеристики'];
+-var f_menu1=['Подписка UNIQ','Мобильное приложение','Отзывы','Вопросы'];
+footer
+    .container
+        .footer_row
+            .logo
+                a(href="#")
+                    img(src=dir+"LogoUniq.svg")
+
+            .footer_menu
+                ul
+                    for f_menu_item, index in f_menu
+                        li
+                            a(href="#")=f_menu_item
+                ul
+                    for f_menu_item1, index in f_menu1
+                        li
+                            a(href="#")=f_menu_item1
+
+            .footer_contacts
+                .title Контакты
+                a.email(href="mailto:uniqsupport@example.ru") uniqsupport@example.ru
+                a.btn.orange(href="#modal") Задать вопрос
+
+        .copyright
+            a.privacy_policy(href="") Политика конфиденциальности
+            .dev Сделано в
+                a(href="#") Делаем
+

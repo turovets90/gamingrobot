@@ -31,13 +31,14 @@ $(document).ready(function(){
         });
         return false;
     });
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest(".mm_menu.open").length) {
-            $(".mm_menu.open").removeClass('open');
-            $("html").removeClass('page-noscroll');
-        }
-        e.stopPropagation();
+
+
+
+    $('.faq_item_header').click(function(){
+        $(this).toggleClass('act').next().slideToggle();
+
     });
+
 
 
     if($('.works_list > div').length > 3){

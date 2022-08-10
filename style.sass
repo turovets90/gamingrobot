@@ -474,6 +474,10 @@ header
   @media (max-width: 991px)
     max-width: 110px
 
+  &.orange
+    background: $orange
+    color: #fff
+
 
 
 .logo
@@ -584,7 +588,7 @@ $black: #211D1A
   padding-top: 125px
   +border-radius(0 0 48px 48px)
   @media (max-width: 767px)
-    background: #FFF3EB
+    //background: #FFF3EB
     padding-top: 95px
 
   .site_title
@@ -608,10 +612,12 @@ $black: #211D1A
     @media (max-width: 767px)
       font-size: 28px
       line-height: 28px
-      color: #000
+      //color: #000
       margin-bottom: 10px
       .orange
         color: $orange
+        @media (max-width: 767px)
+          color: #fff
       .d_block
         display: block
 
@@ -636,7 +642,7 @@ $black: #211D1A
       display: none
     font-size: 16px
     line-height: 23px
-    color: #000
+    color: #fff
 
 
   .btn_default
@@ -658,6 +664,9 @@ $black: #211D1A
   text-decoration: none
   &:hover, &:focus
     text-decoration: none
+  &.orange
+    color: #fff
+    background: $orange
 
 .adv_list
   li
@@ -750,3 +759,999 @@ $black: #211D1A
 
 
 
+.d_none
+  display: none
+
+
+.block_slider
+  background: #FFF3EB
+  +border-radius(48px)
+
+.pb_pt
+  padding: 140px 0
+  @media (max-width: 1200px)
+    padding: 90px 0
+  @media (max-width: 991px)
+    padding: 70px 0
+  @media (max-width: 767px)
+    padding: 65px 0
+
+.pb
+  padding-bottom: 140px
+  @media (max-width: 1200px)
+    padding-bottom: 90px
+  @media (max-width: 991px)
+    padding-bottom: 70px
+  @media (max-width: 767px)
+    padding-bottom: 65px
+
+
+.why_need_item
+  background: #FF9040
+  position: relative
+  +border-radius(32px)
+  margin-bottom: 24px
+  overflow: hidden
+  padding: 64px
+
+  color: #fff
+  @media (min-width: 1201px)
+    min-height: 430px
+  @media (max-width: 1200px)
+    padding: 50px
+  @media (max-width: 991px)
+    margin-bottom: 16px
+    padding: 24px
+    text-align: right
+    min-height: 617px
+    +flex
+    +col
+    +j-beetween
+
+  &.item1
+    img
+      @media (max-width: 991px)
+        bottom: -19%
+        left: 2%
+        max-width: initial
+        max-height: initial
+
+
+  &.item2
+    img
+      right: -34px
+      @media (max-width: 991px)
+        top: initial
+        left: 13%
+        bottom: -9%
+        max-width: initial
+
+  &.item3
+    img
+      right: -123px
+      max-width: initial
+      @media (max-width: 991px)
+        right: initial
+        max-width: initial
+        left: 12%
+        bottom: -8%
+  &.item4
+    img
+      right: -44px
+      bottom: -90px
+      @media (max-width: 991px)
+        right: initial
+        max-width: initial
+        left: -7%
+        bottom: -7%
+  .why_need_item_content
+    max-width: 50%
+    @media (max-width: 991px)
+      max-width: 100%
+      text-align: left
+
+  .why_need_title
+    font-size: 28px
+    line-height: 28px
+    font-family: $font_bold
+    @media (max-width: 1200px)
+      font-size: 26px
+      line-height: 26px
+    @media (max-width: 991px)
+      font-size: 24px
+      line-height: 24px
+    @media (max-width: 767px)
+      font-size: 22px
+      line-height: 22px
+
+  .why_need_desc
+    font-size: 16px
+    line-height: 23px
+
+  img
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    max-height: 100%
+    max-width: 48.5%
+    @media (max-width: 991px)
+      max-width: 100%
+      max-height: 360px
+      top: initial
+
+.row
+  +flex
+  +wrap
+  margin-left: -10px
+  margin-right: -10px
+
+
+.col_3
+  //width: 30%
+  width: 386px
+  padding-right: 10px
+  padding-left: 10px
+  @media (max-width: 1200px)
+    width: 300px
+  @media (max-width: 991px)
+    width: 100%
+
+.col_7
+  //width: 70%
+  width: calc(100% - 386px)
+  padding-right: 10px
+  padding-left: 10px
+  @media (max-width: 1200px)
+    width: calc(100% - 300px)
+  @media (max-width: 991px)
+    width: 100%
+
+
+h2, .h2
+  font-size: 48px
+  line-height: 1
+  text-transform: uppercase
+  font-family: $font_bold
+  @media (max-width: 1200px)
+    font-size: 43px
+  @media (max-width: 767px)
+    font-size: 32px
+  span
+    color: $orange
+
+.why_need_header
+  margin-bottom: 100px
+  @media (max-width: 1200px)
+    margin-bottom: 70px
+  @media (max-width: 991px)
+    margin-bottom: 50px
+  @media (max-width: 767px)
+    margin-bottom: 30px
+  .col_3
+    width: 33.5%
+    @media (max-width: 1200px)
+      width: 100%
+      margin-bottom: 20px
+  .col_7
+    width: 66.5%
+
+    @media (max-width: 1200px)
+      width: 100%
+
+  .desc
+    font-size: 20px
+    line-height: 1
+    @media (max-width: 1200px)
+      font-size: 18px
+      line-height: 1
+    @media (max-width: 767px)
+      font-size: 16px
+
+
+
+.why_need_body
+  .col_3
+    @media (max-width: 991px)
+      margin-bottom: 25px
+    p
+      font-size: 20px
+      font-family: $font_bold
+      max-width: 257px
+      margin:  0 0 12px
+      @media (max-width: 1200px)
+        max-width: 100%
+      @media (max-width: 767px)
+        font-size: 16px
+        margin-bottom: 10px
+
+
+
+.video_container
+  display: inline-block
+  position: relative
+  .play_btn
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 12%
+    margin: auto
+    cursor:  pointer
+    width: 124px
+    height: 124px
+    z-index: 2
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='124' height='124' viewBox='0 0 124 124' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='124' height='124' rx='62' fill='%23FF9040'/%3e%3cpath d='M87.0077 67.3282L50.2188 91.8541C47.5606 93.6263 44 91.7207 44 88.5259V39.4741C44 36.2793 47.5606 34.3737 50.2188 36.1459L87.0077 60.6718C89.3826 62.2551 89.3826 65.7449 87.0077 67.3282Z' fill='white'/%3e%3c/svg%3e ")
+    @media (max-width: 767px)
+      width: 72px
+      height: 72px
+      background-size: cover
+      right: 0
+
+
+.video_review
+  .col_3
+    @media (max-width: 767px)
+      margin-bottom: 30px
+  img
+    position: relative
+    z-index: 1
+    @media (max-width: 767px)
+      max-width: 64px
+  video
+    +border-radius(32px)
+    width: 100%
+    //height: 640px
+
+.video_review_desc
+  //padding: 20px
+  font-size: 16px
+  font-weight: 700
+  position: relative
+  max-width: 277px
+  padding: 30px 40px 20px
+  margin-left: 58px
+  margin-top: -60px
+  @media (max-width: 767px)
+    font-weight: 400
+    max-width: 350px
+    margin-left: 30px
+  &:before
+    +b_a
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: #FFF3EB
+    +border-radius(12px)
+    +transform(rotate(-5deg))
+  span
+    position: relative
+    display: inline-block
+
+
+
+.mb_40
+  margin-bottom: 40px
+  @media (max-width: 767px)
+    margin-bottom: 32px
+
+
+
+.what_can
+  .col_3
+    @media (max-width: 767px)
+      margin-bottom: 30px
+      .h2, h2
+        span
+          color: #000
+.what_can_list
+  +flex
+  +wrap
+  margin: 0 -12px
+  width: 100%
+  @media (max-width: 767px)
+    margin: 0
+  .item
+    margin-bottom: 24px
+    padding: 0 12px
+    width: 100%
+    @media (max-width: 767px)
+      padding: 0
+      margin-bottom: 16px
+    &.item1
+      .what_can_list_item
+        height: 500px
+        @media (max-width: 767px)
+          height: 436px
+        img
+          position: absolute
+          right: 0
+          bottom: 0
+    &.item2, &.item6, &.item8
+      width: 55%
+      @media (max-width: 767px)
+        width: 100%
+      .what_can_list_item
+        .what_can_list_item_content
+          max-width: 100%
+
+    &.item3
+      .what_can_list_item
+        @media (max-width: 767px)
+          height: 300px
+
+    &.item4
+      .what_can_list_item
+        height: 440px
+        background: url(./img/what_can/bg4.png)
+        background-size: cover
+        background-position: center
+        @media (max-width: 767px)
+          height: 450px
+
+
+
+
+
+
+    &.item3, &.item5, &.item9
+      width: 45%
+      @media (max-width: 767px)
+        width: 100%
+      .what_can_list_item
+        .what_can_list_item_content
+          max-width: 100%
+
+    &.item2, &.item8
+      .what_can_list_item
+        background: #FFF3EB
+        color: #000
+        img
+          position: absolute
+          right: 0
+          bottom: 0
+    &.item2
+      .what_can_list_item
+        @media (max-width: 767px)
+          height: 268px
+        img
+          right: 32px
+          bottom: 30px
+          @media (max-width: 767px)
+            max-width: 95px
+            right: 24px
+            bottom: 11px
+
+
+    &.item5
+      .what_can_list_item
+        @media (max-width: 767px)
+          height: 340px
+        img
+          @media (max-width: 767px)
+
+
+
+    &.item6
+      .what_can_list_item
+        background: #FFDECA
+        color: #000
+        @media (max-width: 767px)
+          height: 373px
+        &:before
+          +b_a
+          width: 100%
+          height: 256px
+          top: 0
+          right: -24%
+          background: linear-gradient(212.17deg, #FFDECA 45.1%, rgba(255, 222, 202, 0) 73.39%)
+          z-index: 1
+        img
+          position: absolute
+          right: 0
+          bottom: 0
+
+
+    &.item7
+      .what_can_list_item
+        height: 466px
+        background: url(./img/what_can/7.png)
+        background-size: cover
+        background-position: center
+        @media (max-width: 767px)
+          height: 405px
+        &:before
+          +b_a
+          width: 100%
+          height: 240px
+          left: 0
+          top: 0
+          background: linear-gradient(180deg, #212121 0%, rgba(50, 50, 50, 0) 100%)
+          z-index: 3
+
+
+    &.item8
+      .what_can_list_item
+        @media (max-width: 767px)
+          height: 357px
+        &:before
+          +b_a
+          width: 100%
+          height: 271px
+          top: 0
+          left: 0
+          background: linear-gradient(186.79deg, #FFF2EB 50.68%, rgba(255, 243, 235, 0) 92.67%)
+          z-index: 1
+
+    &.item9
+      .what_can_list_item
+        @media (max-width: 767px)
+          height: 340px
+        img
+          right: 38px
+          bottom: 5px
+          @media (max-width: 767px)
+            right: -66px
+            bottom: -12px
+
+  .what_can_list_item
+    +border-radius(24px)
+    background: $orange
+    color: #fff
+    padding: 40px
+    height: 380px
+    position: relative
+    overflow: hidden
+    @media (max-width: 767px)
+      padding: 24px
+    .what_can_list_item_content
+      position: relative
+      z-index: 4
+      max-width: 60%
+      @media (max-width: 767px)
+        max-width: 100%
+      .title
+        font-size: 24px
+        font-family: $font_bold
+        line-height: 1
+        margin-bottom: 17px
+      .sub_title
+        font-size: 16px
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+
+    .item7_content
+      +flex
+      +col
+      +ai-end
+      position: relative
+      z-index: 2
+      @media (max-width: 767px)
+        padding-top: 30px
+      .square
+        width: 215px
+        height: 215px
+        border: 2px solid #FFFFFF
+        position: relative
+        display: inline-block
+        margin-right: 26%
+        margin-bottom: 25px
+        @media (max-width: 1440px)
+          margin-right: 20%
+        @media (max-width: 1200px)
+          margin-right: 15%
+        @media (max-width: 767px)
+          width: 140px
+          height: 140px
+          margin-right: 4%
+        span
+          display: inline-block
+          position: absolute
+          width: 18px
+          height: 18px
+          background: #fff
+          +border-radius(50%)
+          @media (max-width: 767px)
+            width: 12px
+            height: 12px
+          &:nth-child(1)
+            top: -9px
+            left: -9px
+          &:nth-child(2)
+            right: -9px
+            top: -9px
+          &:nth-child(3)
+            bottom: -9px
+            right: -9px
+          &:nth-child(4)
+            bottom: -9px
+            left: -9px
+      button
+        color: #fff
+        background: $orange
+        +border-radius(16px)
+        width: 171px
+        height: 37px
+        +flex
+        +ai-center
+        padding: 8px 12px
+        border: 0
+        font-weight: 700
+        margin-right: 37%
+        @media (max-width: 1440px)
+          margin-right: 34%
+        @media (max-width: 1200px)
+          margin-right: 10%
+        @media (max-width: 767px)
+          margin-right: 5%
+
+
+
+
+.prices
+  .row
+    margin: 0 -10px
+    > div
+      padding: 0 10px
+      margin-bottom: 24px
+      &:last-child
+        margin-bottom: 0
+    .col_6
+      width: 58%
+      @media (max-width: 991px)
+        width: 100%
+        padding: 0 26px
+    .col_4
+      width: 42%
+      @media (max-width: 767px)
+        width: 100%
+    .col_10
+      width: 100%
+  .item
+    +border-radius(24px)
+    position: relative
+    height: 480px
+    padding: 55px 64px 45px
+    @media (max-width: 767px)
+      padding: 32px
+      height: 395px
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+
+    .btn_default
+      @media (max-width: 767px)
+        max-width: 245px
+
+    .h2
+      @media (min-width: 992px)
+        font-size: 48px
+        line-height: 1
+    &.pre_order
+      padding-bottom: 20px
+      +transform(translateY(-15px))
+      @media (max-width: 767px)
+        padding-bottom: 28px
+        +transform(translateY(-5px))
+      .h2
+        color: #fff
+        @media (max-width: 767px)
+          max-width: 300px
+      .bg
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        +border-radius(24px)
+        background: #FF9040 url(./img/pattern.png)
+        background-position: center
+        background-size: cover
+        +transform(rotate(-2deg))
+        &:before
+          +b_a
+          background: url(./img/pre_order.png)
+          width: 451px
+          height: 395px
+          right: 0
+          bottom: 0
+          @media (max-width: 767px)
+            background: url(./img/pre_order_mob.png)
+            width: 213px
+            height: 377px
+            top: 0
+            margin: auto
+
+      .price
+        +flex
+        +ai-end
+        color: #fff
+        +transform(rotate(1deg))
+        margin-bottom: 30px
+        @media (max-width: 767px)
+          margin-bottom: 15px
+        .current_price
+          text-transform: uppercase
+          font-size: 40px
+          font-weight: 700
+          line-height: 1
+          margin-right: 15px
+          @media (max-width: 767px)
+            font-size: 32px
+
+        .old_price
+          line-height: 1
+          text-decoration-line: line-through
+          font-size: 24px
+          @media (max-width: 767px)
+            font-size: 20px
+
+
+
+
+
+    &.subscription
+      background: #FFF3EB
+      position: relative
+      &:before
+        +b_a
+        background: url(./img/subscription.png)
+        width: 245px
+        height: 311px
+        right: 0
+        bottom: 0
+        @media (max-width: 767px)
+          background: url(./img/subscription_mob.png)
+          width: 184px
+          height: 257px
+          bottom: 3px
+      .h2
+        margin-bottom: 15px
+      .sub_title
+        font-size: 20px
+      .price
+        color: $orange
+        font-size: 40px
+        text-transform: uppercase
+        font-family: $font_bold
+        @media (max-width: 767px)
+          font-size: 32px
+        span
+          font-size: 16px
+      .bold
+        font-family: $font_bold
+        span
+          text-transform: uppercase
+          color: $orange
+
+      .bottom
+        @media (max-width: 767px)
+          max-width: 214px
+
+    &.nfc
+      background: url(./img/nfc_bg.png)
+      background-size: cover
+      background-position: center
+      height: auto
+      color: #fff
+      @media (max-width: 767px)
+        display: none
+
+      .h2
+        margin-bottom: 18px
+        @media (min-width: 992px)
+          font-size: 40px
+        span
+          color: $orange
+          display: block
+      .sub_title
+        font-size: 20px
+
+
+
+  .d_flex
+    height: 100%
+    +flex
+    +col
+    +j-beetween
+    position: relative
+    z-index: 1
+
+
+
+.reviews_list
+  +flex
+  +wrap
+  margin: 0 -10px
+  .item
+    padding: 0 10px
+    width: 33.33%
+    margin-bottom: 16px
+    @media (max-width: 767px)
+      width: 100%
+    .review_item
+      background: #FFF3EB
+      +border-radius(16px)
+      padding: 40px
+      position: relative
+      //min-height: 500px
+      @media (max-width: 767px)
+        padding: 24px
+      &:before
+        +b_a
+        width: 100%
+        height: 110px
+        left: 0
+        bottom: 0
+        background: linear-gradient(0deg, #FFF3EB 61.82%, rgba(255, 243, 235, 0) 100%)
+      .review_header
+        +flex
+        +ai-center
+        margin-bottom: 18px
+        .review_author
+          width: 96px
+          min-width: 96px
+          height: 96px
+          border: 4px solid #FFDECA
+          +border-radius(50%)
+          background-size: cover
+          background-position: center
+          margin-right: 15px
+          @media (max-width: 767px)
+            width: 72px
+            min-width: 72px
+            height: 72px
+        .review_author_info
+          .name
+            font-size: 24px
+            font-family: $font_bold
+            margin-bottom: 10px
+            @media (max-width: 767px)
+              font-size: 20px
+              margin-bottom: 5px
+          .position
+            font-size: 16px
+            color: rgba(0, 0, 0, 0.2)
+            font-family: $font_bold
+            line-height: 16px
+
+      .review_body
+        +flex
+        +col
+        +j-beetween
+        .txt
+          font-size: 18px
+          line-height: 25px
+          margin-bottom: 7px
+          height: 275px
+          overflow: hidden
+        .read_more
+          font-size: 20px
+          color: $orange
+          font-weight: 700
+          position: relative
+          z-index: 2
+          cursor: pointer
+
+
+.faq
+  .btn_default
+    @media (max-width: 767px)
+      max-width: 100%
+    &.mobile
+      @media (min-width: 768px)
+        display: none
+    &.desktop
+      @media (max-width: 767px)
+        display: none
+
+.faq_list
+  max-width: 1029px
+  .faq_item
+    border: 1px solid $orange
+    +border-radius(16px)
+    margin-bottom: 24px
+    @media (max-width: 767px)
+      margin-bottom: 16px
+    .faq_item_header
+      padding: 32px 55px 32px 32px
+      font-size: 24px
+      line-height: 1
+      font-family: $font_bold
+      position: relative
+      cursor: pointer
+
+      @media (max-width: 767px)
+        padding: 24px 55px 24px 24px
+        font-size: 20px
+      &.act
+        &:before
+          +transform(rotate(45deg))
+        &:after
+          +transform(rotate(135deg))
+      &:before, &:after
+        +b_a
+        width: 23px
+        height: 4px
+        background: $orange
+        +border-radius(5px)
+        right: 32px
+        top: 0
+        bottom: 0
+        margin: auto
+        +transition($transition_default)
+        @media (max-width: 767px)
+          right: 24px
+      &:after
+        +transform(rotate(90deg))
+
+
+    .faq_item_body
+      padding: 0 32px 32px
+      font-size: 16px
+      display: none
+      @media (max-width: 767px)
+        padding: 0 24px 24px
+
+
+
+
+.pre_order_bottom
+  @media (max-width: 767px)
+    display: none
+  .pre_order
+    padding: 60px 64px
+    position: relative
+
+    @media (max-width: 767px)
+      padding-bottom: 28px
+    .d_flex
+      position: relative
+      z-index: 2
+    .h2
+      color: #fff
+      margin-bottom: 55px
+      @media (max-width: 767px)
+        max-width: 300px
+    .bg
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      +border-radius(24px)
+      background: #FF9040 url(./img/pattern.png)
+      background-position: center
+      background-size: cover
+
+      &:before
+        +b_a
+        background: url(./img/pre_order_bottom.png)
+        width: 610px
+        height: 340px
+        right: 0
+        bottom: 0
+        @media (max-width: 767px)
+          background: url(./img/pre_order_mob.png)
+          width: 213px
+          height: 377px
+          top: 0
+          margin: auto
+
+    .price
+      +flex
+      +ai-end
+      color: #fff
+      +transform(rotate(1deg))
+      margin-bottom: 17px
+      @media (max-width: 767px)
+        margin-bottom: 15px
+      .current_price
+        text-transform: uppercase
+        font-size: 40px
+        font-weight: 700
+        line-height: 1
+        margin-right: 15px
+        @media (max-width: 767px)
+          font-size: 32px
+
+      .old_price
+        line-height: 1
+        text-decoration-line: line-through
+        font-size: 24px
+        @media (max-width: 767px)
+          font-size: 20px
+
+
+
+.footer_row
+  +flex
+  +j-beetween
+  +wrap
+  padding-bottom: 64px
+  @media (max-width: 767px)
+    padding-bottom: 40px
+  .logo
+    margin-right: 20px
+    @media (max-width: 991px)
+      width: 100%
+      margin-bottom: 30px
+  .footer_menu
+    width: 100%
+    max-width: 555px
+    margin-right: 7.5%
+    +flex
+    +j-beetween
+    @media (max-width: 1200px)
+      margin-right: 30px
+    @media (max-width: 991px)
+      max-width: 100%
+      margin-bottom: 30px
+      margin-right: 0
+    ul
+      @media (max-width: 767px)
+        + ul
+          margin-left: 30px
+
+      li
+        margin-bottom: 10px
+
+        a
+          font-size: 14px
+          color: #000
+          text-decoration: none
+          font-weight: 700
+          &:hover, &:focus
+            color: $orange
+            text-decoration: underline
+
+
+  .footer_contacts
+    width: 33%
+    @media (max-width: 991px)
+      width: 100%
+    .title
+      font-size: 14px
+      color: #A2A2A2
+      margin-bottom: 10px
+    .email
+      font-size: 32px
+      text-decoration: none
+      font-weight: 700
+      color: #000
+      display: block
+      margin-bottom: 40px
+      line-height: 1
+      @media (max-width: 1200px)
+        font-size: 24px
+    .btn
+      @media (max-width: 991px)
+        max-width: 185px
+
+
+
+.copyright
+  border-top: 1px solid #F2F2F2
+  +flex
+  +j-beetween
+  +wrap
+  font-size: 14px
+  color: #A2A2A2
+  padding: 23px 0
+  a
+    color: $orange
+    display: inline-block
+    margin-left: 5px
+    text-decoration: none
+
+  .privacy_policy
+    font-size: 14px
+    color: #A2A2A2
+    @media (max-width: 767px)
+      width: 100%
+      margin-bottom: 10px
