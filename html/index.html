@@ -22,19 +22,19 @@
           <div class="header_row">
             <div class="col_left">
               <ul class="menu">
-                <li class="has_child"><a href="#">О игрушке</a>
+                <li class="has_child"><a href="#about">О игрушке</a>
                   <ul class="sub-menu">
-                    <li><a href="#">Зачем нужен UNIQ?</a></li>
-                    <li><a href="#">Как UNIQ это делает?</a></li>
-                    <li><a href="#">Видеообзор</a></li>
-                    <li><a href="#">Технические характеристики</a></li>
-                    <li><a href="#">Подписка UNIQ</a></li>
-                    <li><a href="#">Мобильное приложение</a></li>
+                    <li><a href="#why_need">Зачем нужен UNIQ?</a></li>
+                    <li><a href="#how_does">Как UNIQ это делает?</a></li>
+                    <li><a href="#video_review">Видеообзор</a></li>
+                    <li><a href="#characteristics">Технические характеристики</a></li>
+                    <li><a href="#subscription">Подписка UNIQ</a></li>
+                    <li><a href="#mobile_app">Мобильное приложение</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Отзывы</a>
+                <li><a href="#reviews">Отзывы</a>
                 </li>
-                <li><a href="#">Вопросы</a>
+                <li><a href="#faq">Вопросы</a>
                 </li>
               </ul>
             </div>
@@ -42,19 +42,18 @@
               <div class="logo"><a href="#"><img class="logo_white" src="../img/logo_w.svg"/><img class="logo_orange" src="../img/logo.svg"/></a></div>
             </div>
             <div class="col_right">
-              <div class="lang_block">
-                <button class="lang_btn"><img class="flag" src="../img/rus.svg"/><span class="txt">Ру</span></button>
+              <div class="lang_block"><a class="lang_btn" href="#"><img class="flag" src="../img/rus.svg"/><span class="txt">Ру</span></a>
                 <ul class="sub-menu">
                   <li><a href="#"><img class="glag" src="../img/esp.svg"/><span class="txt">Es</span></a></li>
                   <li><a href="#"><img class="glag" src="../img/us.svg"/><span class="txt">US</span></a></li>
                 </ul>
-              </div><a class="btn" href="#modal">Предзаказ</a>
+              </div><a class="btn modal_toggle" href="#pre_order_modal">Предзаказ</a>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="first_screen">
+    <section class="first_screen" id="about">
       <div class="container">
         <h1 class="site_title"><span class="orange">UNIQ</span> – <span class="d_block">невоображаемый друг для вашего ребенка</span></h1>
         <p class="sub_title"><span>Детский игровой компаньон</span> с искусственным интеллектом.</p>
@@ -74,7 +73,7 @@
               <li>
                 <button class="white">Для детей-дошкольников 5-7 лет</button>
               </li>
-            </ul><a class="btn_default" href="#modal">Узнать больше</a>
+            </ul><a class="btn_default modal_toggle" href="#pre_order_modal">Узнать больше</a>
           </div>
           <div class="col_center">
             <picture><img class="img_desktop" src="../img/cat.png"/><img class="img_mobile" src="../img/cat_mobile.png"/></picture>
@@ -83,11 +82,11 @@
         </div>
       </div>
     </section>
-    <section class="why_need pb_pt">
+    <section class="why_need pb_pt" id="why_need">
       <div class="container">
         <div class="row why_need_header">
           <div class="col_3">
-            <div class="h2">Зачем<br> нужен <span>UNIQ</span></div>
+            <div class="box_title">Зачем<br> нужен <span>UNIQ</span></div>
           </div>
           <div class="col_7">
             <div class="desc">С самого раннего возраста ребенок учится и познает мир только через игры. Уник - уникальный игровой компаньон, который предлагает бесконечное количество игр, наполненных познавательным контентом.</div>
@@ -137,64 +136,136 @@
         </div>
       </div>
     </section>
-    <section class="block_slider d_none">
+    <section class="block_slider" id="how_does">
       <div class="container">
-        <div class="h2"><span>Uniq</span> – игровой робот-друг с искусственным интеллектом</div>
+        <div class="box_title"><span>Uniq</span> – игровой робот-друг с<br> искусственным интеллектом</div>
         <div class="slider_row">
           <div class="col">
-            <div class="slider_image">
-              <div class="slider_image_item">
-                <picture><span class="tooltip">Lorem Ipsum is simply dummy</span><img src="../img/cat1.png"/></picture>
-              </div>
-              <div class="slider_image_item">
-                <picture><span class="tooltip">when an unknown printer</span><img src="../img/cat1.png"/></picture>
-              </div>
-              <div class="slider_image_item">
-                <picture><span class="tooltip">Lorem Ipsum</span><img src="../img/cat1.png"/></picture>
-              </div>
-              <div class="slider_image_item">
-                <picture><span class="tooltip">Lorem Ipsum</span><img src="../img/cat1.png"/></picture>
-              </div>
-              <div class="slider_image_item">
-                <picture><span class="tooltip"></span><img src="../img/cat1.png"/></picture>
+            <div class="slider_image_container">
+              <div class="slider_image">
+                <div class="item">
+                  <div class="slider_image_item item1">
+                    <picture><span class="tooltip">Поиграем в съедобное / несъедобное?</span><img src="../img/slider/1.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item2">
+                    <picture><span class="tooltip">Какие животные были в зоопарке сегодня?</span><img src="../img/slider/2.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item3">
+                    <picture><span class="tooltip">Эх, сегодня сильный дождь. Мы не сможем покачаться на любимых качелях :(</span><img src="../img/slider/3.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item4">
+                    <picture><span class="tooltip">Друг, с днем рождения !</span><img src="../img/slider/4.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item5">
+                    <picture><span class="tooltip">Не переживай! Соберем замок еще раз :)</span><img src="../img/slider/5.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item6">
+                    <picture><span class="tooltip">Текст</span><img src="../img/slider/6.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item7">
+                    <picture><span class="tooltip">Поиграем в магазин игрушек?</span><img src="../img/slider/7.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item8">
+                    <picture><span class="tooltip">Добрый доктор Айболит! Он под деревом сидит. Приходи к нему лечиться...</span><img src="../img/slider/8.png"/></picture>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_image_item item9">
+                    <picture><span class="tooltip">♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪</span><img src="../img/slider/9.png"/></picture>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="slider_txt">
-              <div class="slider_txt_item">
-                <div class="count">1</div>
-                <div class="title">Подстраиваться под возраст ребенка и его интересы</div>
-                <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
-              </div>
-              <div class="slider_txt_item">
-                <div class="count">2</div>
-                <div class="title">Подстраиваться под возраст ребенка и его интересы</div>
-                <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
-              </div>
-              <div class="slider_txt_item">
-                <div class="count">3</div>
-                <div class="title">Подстраиваться под возраст ребенка и его интересы</div>
-                <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
-              </div>
-              <div class="slider_txt_item">
-                <div class="count">4</div>
-                <div class="title">Подстраиваться под возраст ребенка и его интересы</div>
-                <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
-              </div>
-              <div class="slider_txt_item">
-                <div class="count">5</div>
-                <div class="title">Подстраиваться под возраст ребенка и его интересы</div>
-                <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+            <div class="slider_txt_container">
+              <div class="slider_txt">
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">1</div>
+                    <div class="title">Разговаривать с ребенком на детские темы и рассказывать про себя</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">2</div>
+                    <div class="title">Выражать эмоции в зависимости от игры или темы беседы</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">3</div>
+                    <div class="title">Запоминать предпочтения ребенка и важные для него вещи и события</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">4</div>
+                    <div class="title">Запоминать предпочтения ребенка и важные для него вещи и события</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">5</div>
+                    <div class="title">Проявлять сопереживание к ребенку</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">6</div>
+                    <div class="title">Отвечать на вопросы “почему” и “как”</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">7</div>
+                    <div class="title">Предлагать ребенку поиграть</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">8</div>
+                    <div class="title">Рассказывать сказки</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">9</div>
+                    <div class="title">Включать музыку</div>
+                    <div class="desc">Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="video_review pb_pt">
+    <section class="video_review pb_pt" id="video_review">
       <div class="container">
-        <div class="h2 mb_40">Видеообзор</div>
+        <div class="box_title mb_40">Видеообзор</div>
         <div class="row">
           <div class="col_3"><img src="../img/335748.png"/>
             <div class="video_review_desc"><span>“Хей, посмотри видео про меня” (Текст от имени игрушки про ее возможности )</span></div>
@@ -207,11 +278,11 @@
         </div>
       </div>
     </section>
-    <section class="what_can">
+    <section class="what_can" id="characteristics">
       <div class="container">
         <div class="row">
           <div class="col_3">
-            <div class="h2">что умеет <span>UNIQ</span></div>
+            <div class="box_title">что умеет <span>UNIQ</span></div>
           </div>
           <div class="col_7">
             <div class="what_can_list">
@@ -296,20 +367,20 @@
         </div>
       </div>
     </section>
-    <section class="prices pb_pt">
+    <section class="prices pb_pt" id="subscription">
       <div class="container">
         <div class="row">
           <div class="col_6">
             <div class="item pre_order">
               <div class="d_flex">
                 <div class="top">
-                  <div class="h2">Предзаказ UNIQ</div>
+                  <div class="box_title">Предзаказ UNIQ</div>
                 </div>
                 <div class="bottom">
                   <div class="price">
                     <div class="current_price">25 900 ₽</div>
                     <div class="old_price">55 900 ₽</div>
-                  </div><a class="btn_default" href="modal">Предзаказать</a>
+                  </div><a class="btn_default modal_toggle" href="#pre_order_modal">Предзаказать</a>
                 </div>
               </div>
               <div class="bg"></div>
@@ -319,7 +390,7 @@
             <div class="item subscription">
               <div class="d_flex">
                 <div class="top">
-                  <div class="h2">Подписка <span>UNIQ</span></div>
+                  <div class="box_title">Подписка <span>UNIQ</span></div>
                   <div class="sub_title">Включает дополнительный контент для игр с ребенком</div>
                 </div>
                 <div class="bottom">
@@ -331,16 +402,16 @@
           </div>
           <div class="col_10">
             <div class="item nfc">
-              <div class="h2">Закажи UNIQ и получи <span>набор интерактивных NFC карточек</span></div>
+              <div class="box_title">Закажи UNIQ и получи <span>набор интерактивных NFC карточек</span></div>
               <div class="sub_title">Включает дополнительный контент для игр с ребенком</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="reviews pb_pt">
+    <section class="reviews pb" id="reviews">
       <div class="container">
-        <div class="h2 mb_40">Отзывы</div>
+        <div class="box_title mb_40">Отзывы</div>
         <div class="reviews_list">
           <div class="item">
             <div class="review_item">
@@ -387,9 +458,68 @@
         </div>
       </div>
     </section>
-    <section class="faq pb">
+    <section class="block_slider" id="mobile_app">
       <div class="container">
-        <div class="h2 mb_40">Вопросы</div>
+        <div class="box_title">мобильное приложение <span class="d_block">для родителей</span></div>
+        <div class="slider_row">
+          <div class="col">
+            <div class="slider_image_container">
+              <div class="slider_image">
+                <div class="item">
+                  <div class="slider_image_item">
+                    <picture><img src="../img/mob_app.png"/></picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="slider_txt_container">
+              <div class="slider_txt">
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">1</div>
+                    <div class="title">Мониторинг активности</div>
+                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">2</div>
+                    <div class="title">Мониторинг активности</div>
+                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">3</div>
+                    <div class="title">Мониторинг активности</div>
+                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">4</div>
+                    <div class="title">Мониторинг активности</div>
+                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_txt_item">
+                    <div class="count">5</div>
+                    <div class="title">Мониторинг активности</div>
+                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq pb_pt" id="faq">
+      <div class="container">
+        <div class="box_title mb_40">Вопросы</div>
         <div class="row">
           <div class="col_7">
             <div class="faq_list">
@@ -411,22 +541,22 @@
               </div>
             </div>
           </div>
-          <div class="col_3"><a class="btn_default orange desktop" href="#modal">Задать вопрос</a><a class="btn_default orange mobile" href="#modal">У меня остались вопросы</a></div>
+          <div class="col_3"><a class="btn_default orange desktop modal_toggle" href="#faq_modal">Задать вопрос</a><a class="btn_default orange mobile modal_toggle" href="#faq_modal">У меня остались вопросы</a></div>
         </div>
       </div>
     </section>
-    <section class="pre_order_bottom pb">
+    <section class="pre_order_bottom pb" id="pre_order_bottom">
       <div class="container">
         <div class="pre_order">
           <div class="d_flex">
             <div class="top">
-              <div class="h2">Предзаказ UNIQ</div>
+              <div class="box_title">Предзаказ UNIQ</div>
             </div>
             <div class="bottom">
               <div class="price">
                 <div class="current_price">25 900 ₽</div>
                 <div class="old_price">55 900 ₽</div>
-              </div><a class="btn_default" href="modal">Предзаказать</a>
+              </div><a class="btn_default modal_toggle" href="#pre_order_modal">Предзаказать</a>
             </div>
           </div>
           <div class="bg"></div>
@@ -452,7 +582,7 @@
             </ul>
           </div>
           <div class="footer_contacts">
-            <div class="title">Контакты</div><a class="email" href="mailto:uniqsupport@example.ru">uniqsupport@example.ru</a><a class="btn orange" href="#modal">Задать вопрос</a>
+            <div class="title">Контакты</div><a class="email" href="mailto:uniqsupport@example.ru">uniqsupport@example.ru</a><a class="btn orange modal_toggle" href="#thanks_modal">Задать вопрос</a>
           </div>
         </div>
         <div class="copyright"><a class="privacy_policy" href="">Политика конфиденциальности</a>
@@ -460,6 +590,92 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="pre_order_modal">
+      <div class="modal_dialog">
+        <div class="modal_content">
+          <button class="modal_close"></button>
+          <div class="modal_body">
+            <div class="modal_title">Предзаказ UNIQ</div>
+            <div class="modal_form">
+              <form>
+                <div class="field">
+                  <input class="form_control" type="text"/>
+                  <label>Имя</label>
+                </div>
+                <div class="field">
+                  <input class="form_control" type="text"/>
+                  <label>Телефон</label>
+                </div>
+                <div class="field">
+                  <input class="form_control" type="text"/>
+                  <label>E-mail</label>
+                </div>
+                <div class="field">
+                  <div class="agree">
+                    <input type="checkbox" id="agree"/>
+                    <label for="agree">Согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></label>
+                  </div>
+                </div>
+                <div class="field">
+                  <button class="btn_default orange" type="submit">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="faq_modal">
+      <div class="modal_dialog">
+        <div class="modal_content">
+          <button class="modal_close"></button>
+          <div class="modal_body">
+            <div class="modal_title">Задать вопрос</div>
+            <div class="modal_form">
+              <form>
+                <div class="field">
+                  <input class="form_control" type="text"/>
+                  <label>Имя</label>
+                </div>
+                <div class="field">
+                  <input class="form_control" type="text"/>
+                  <label>Телефон</label>
+                </div>
+                <div class="field">
+                  <input class="form_control" type="text"/>
+                  <label>E-mail</label>
+                </div>
+                <div class="field">
+                  <textarea class="form_control"></textarea>
+                  <label>Ваш вопрос</label>
+                </div>
+                <div class="field">
+                  <div class="agree">
+                    <input type="checkbox" id="agree1"/>
+                    <label for="agree1">Согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></label>
+                  </div>
+                </div>
+                <div class="field">
+                  <button class="btn_default orange" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="thanks_modal">
+      <div class="modal_dialog">
+        <div class="modal_content">
+          <button class="modal_close"></button>
+          <div class="modal_body">
+            <picture><img src="../img/modal_img.png"/></picture>
+            <div class="modal_title">Спасибо за заявку!</div>
+            <div class="thanks_modal_desc">Мы свяжемся с вами в ближайшее время! По всем интересующим вопросам вы можете позвонить нам по телефону <a href="mailto:uniqsupport@example.ru">uniqsupport@example.ru</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../js/slick.js"></script>
     <script src="../js/main.js"></script>

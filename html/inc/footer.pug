@@ -20,10 +20,78 @@ footer
             .footer_contacts
                 .title Контакты
                 a.email(href="mailto:uniqsupport@example.ru") uniqsupport@example.ru
-                a.btn.orange(href="#modal") Задать вопрос
+                a.btn.orange.modal_toggle(href="#thanks_modal") Задать вопрос
 
         .copyright
             a.privacy_policy(href="") Политика конфиденциальности
             .dev Сделано в
                 a(href="#") Делаем
+
+
+
+
+
+.modal#pre_order_modal
+    .modal_dialog
+        .modal_content
+            button.modal_close
+            .modal_body
+                .modal_title Предзаказ UNIQ
+                .modal_form
+                    form
+                        .field
+                            input.form_control(type="text")
+                            label Имя
+                        .field
+                            input.form_control(type="text")
+                            label Телефон
+                        .field
+                            input.form_control(type="text")
+                            label E-mail
+                        .field
+                            .agree
+                                input(type="checkbox" id="agree")
+                                label(for="agree") Согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a>
+                        .field
+                            button.btn_default.orange(type="submit") Оставить заявку
+
+.modal#faq_modal
+    .modal_dialog
+        .modal_content
+            button.modal_close
+            .modal_body
+                .modal_title Задать вопрос
+                .modal_form
+                    form
+                        .field
+                            input.form_control(type="text")
+                            label Имя
+                        .field
+                            input.form_control(type="text")
+                            label Телефон
+                        .field
+                            input.form_control(type="text")
+                            label E-mail
+                        .field
+                            textarea.form_control
+                            label Ваш вопрос
+                        .field
+                            .agree
+                                input(type="checkbox" id="agree1")
+                                label(for="agree1") Согласие на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a>
+                        .field
+                            button.btn_default.orange(type="submit") Отправить
+
+
+
+
+.modal#thanks_modal
+    .modal_dialog
+        .modal_content
+            button.modal_close
+            .modal_body
+                picture
+                    img(src=dir+'modal_img.png')
+                .modal_title Спасибо за заявку!
+                .thanks_modal_desc Мы свяжемся с вами в ближайшее время! По всем интересующим вопросам вы можете позвонить нам по телефону <a href="mailto:uniqsupport@example.ru">uniqsupport@example.ru</a>
 

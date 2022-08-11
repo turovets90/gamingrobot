@@ -1,4 +1,4 @@
-section.first_screen
+section.first_screen#about
     .container
         h1.site_title <span class="orange">UNIQ</span> – <span class="d_block">невоображаемый друг для вашего ребенка</span>
         p.sub_title <span>Детский игровой компаньон</span> с искусственным интеллектом.
@@ -15,7 +15,7 @@ section.first_screen
                         button.green Обучает через игры.
                     li
                         button.white Для детей-дошкольников 5-7 лет
-                a.btn_default(href="#modal") Узнать больше
+                a.btn_default.modal_toggle(href="#pre_order_modal") Узнать больше
             .col_center
                 picture
                     img.img_desktop(src=dir+'cat.png')
@@ -27,11 +27,11 @@ section.first_screen
 
 
 -var w_title=['','Укрепит воображение','Научится проводить время самостоятельно ','Получит знания об окружающем мире','Разовьет эмоциональный интеллект']
-section.why_need.pb_pt
+section.why_need.pb_pt#why_need
     .container
         .row.why_need_header
             .col_3
-                .h2 Зачем<br> нужен <span>UNIQ</span>
+                .box_title Зачем<br> нужен <span>UNIQ</span>
             .col_7
                 .desc С самого раннего возраста ребенок учится и познает мир только через игры. Уник - уникальный игровой компаньон, который предлагает бесконечное количество игр, наполненных познавательным контентом.
 
@@ -60,32 +60,37 @@ section.why_need.pb_pt
                         img(src=dir+"why_need/"+n+".gif")
 
 
--var tooltip=['Поиграем в съедобное / несъедобное?','Lorem Ipsum is simply dummy','when an unknown printer','Lorem Ipsum','Lorem Ipsum'];
-section.block_slider.d_none
+-var tooltip=['','Поиграем в съедобное / несъедобное?','Какие животные были в зоопарке сегодня?','Эх, сегодня сильный дождь. Мы не сможем покачаться на любимых качелях :(','Друг, с днем рождения !','Не переживай! Соберем замок еще раз :)','Текст','Поиграем в магазин игрушек?','Добрый доктор Айболит! Он под деревом сидит. Приходи к нему лечиться...','♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪'];
+-var slider_txt=['Подстраиваться под возраст ребенка и его интересы','Разговаривать с ребенком на детские темы и рассказывать про себя','Выражать эмоции в зависимости от игры или темы беседы','Запоминать предпочтения ребенка и важные для него вещи и события','Запоминать предпочтения ребенка и важные для него вещи и события','Проявлять сопереживание к ребенку','Отвечать на вопросы “почему” и “как”','Предлагать ребенку поиграть','Рассказывать сказки','Включать музыку'];
+section.block_slider#how_does
     .container
-        .h2 <span>Uniq</span> – игровой робот-друг с искусственным интеллектом
+        .box_title <span>Uniq</span> – игровой робот-друг с<br> искусственным интеллектом
         .slider_row
             .col
-                .slider_image
-                    -for(var q=1;q<=5;q++)
-                        .slider_image_item
-                            picture
-                                span.tooltip=tooltip[q]
-                                img(src=dir+'cat1.png')
+                .slider_image_container
+                    .slider_image
+                        -for(var q=1;q<=9;q++)
+                            .item
+                                .slider_image_item(class="item"+q+"")
+                                    picture
+                                        span.tooltip=tooltip[q]
+                                        img(src=dir+"slider/"+q+".png")
 
             .col
-                .slider_txt
-                    -for(var i=1;i<=5;i++)
-                        .slider_txt_item
-                            .count=i
-                            .title Подстраиваться под возраст ребенка и его интересы
-                            .desc Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком
+                .slider_txt_container
+                    .slider_txt
+                        -for(var i=1;i<=9;i++)
+                            .item
+                                .slider_txt_item
+                                    .count=i
+                                    .title=slider_txt[i]
+                                    .desc Предлагать игры и темы для разговора исходя из предыдущего общения с ребенком
 
 
 
-section.video_review.pb_pt
+section.video_review.pb_pt#video_review
     .container
-        .h2.mb_40 Видеообзор
+        .box_title.mb_40 Видеообзор
         .row
             .col_3
                 img(src=dir + "335748.png")
@@ -99,11 +104,11 @@ section.video_review.pb_pt
 
 -var what_can=['','Общается и распознает детскую речь','Сопровождает игры звуками и музыкой','Изменяет цвет во время игр','Показывает свои эмоции','Реагирует на прикосновения ','Реагирует на нажатия кнопок и уникальные NFC карточки','Распознает лица и объекты через камеру ','Сопровождает игры картинками на экране','Видеоняня'];
 -var w_desc=['','Уник умеет поддерживать беседу на детские темы, отвечать на вопросы и задавать их. ','Игры Уника наполнены красивой музыкой и разнообразными звуками, позволяя глубже окунутся в мир игры.','RGB-подсветка позволяет легче ориентироваться в правилах игры, а также дает дополнительное погружение. ','В процессе общения Уник может проявлять целый спектр эмоций, развивая эмоциональный интеллект','Мурлычет, если его погладить или почесать за ушком','Тактильно взаимодействует с ребенком.','Определяет, если ребенок улыбается или плачет, узнает животных, фигуры и жесты.','С помощью изображений помогает разнообразить игры и глубже погрузиться в сюжет','Ребенок всегда под присмотром родителя через мобильное приложение'];
-section.what_can
+section.what_can#characteristics
     .container
         .row
             .col_3
-                .h2 что умеет <span>UNIQ</span>
+                .box_title что умеет <span>UNIQ</span>
             .col_7
                 .what_can_list
                     -for(var w=1;w<=9;w++)
@@ -127,26 +132,26 @@ section.what_can
 
 
 
-section.prices.pb_pt
+section.prices.pb_pt#subscription
     .container
         .row
             .col_6
                 .item.pre_order
                     .d_flex
                         .top
-                            .h2 Предзаказ UNIQ
+                            .box_title Предзаказ UNIQ
                         .bottom
                             .price
                                 .current_price 25 900 ₽
                                 .old_price 55 900 ₽
-                            a.btn_default(href="modal") Предзаказать
+                            a.btn_default.modal_toggle(href="#pre_order_modal") Предзаказать
                     .bg
 
             .col_4
                 .item.subscription
                     .d_flex
                         .top
-                            .h2 Подписка <span>UNIQ</span>
+                            .box_title Подписка <span>UNIQ</span>
                             .sub_title Включает дополнительный контент для игр с ребенком
                         .bottom
                             .price 900 ₽
@@ -154,16 +159,16 @@ section.prices.pb_pt
                             p.bold При покупке UNIQ первые полгода<br> - подписка <span>бесплатнО</span>
             .col_10
                 .item.nfc
-                    .h2 Закажи UNIQ и получи <span>набор интерактивных NFC карточек</span>
+                    .box_title Закажи UNIQ и получи <span>набор интерактивных NFC карточек</span>
                     .sub_title Включает дополнительный контент для игр с ребенком
 
 
 
 
 
-section.reviews.pb_pt
+section.reviews.pb#reviews
     .container
-        .h2.mb_40 Отзывы
+        .box_title.mb_40 Отзывы
         .reviews_list
             -for(var r=1;r<=3;r++)
                 .item
@@ -180,11 +185,30 @@ section.reviews.pb_pt
                             span.read_more Читать полностью
 
 
-
-
-section.faq.pb
+section.block_slider#mobile_app
     .container
-        .h2.mb_40 Вопросы
+        .box_title мобильное приложение <span class="d_block">для родителей</span>
+        .slider_row
+            .col
+                .slider_image_container
+                    .slider_image
+                        .item
+                            .slider_image_item
+                                picture
+                                    img(src=dir+"mob_app.png")
+            .col
+                .slider_txt_container
+                    .slider_txt
+                        -for(var i=1;i<=5;i++)
+                            .item
+                                .slider_txt_item
+                                    .count=i
+                                    .title Мониторинг активности
+                                    .desc Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет
+
+section.faq.pb_pt#faq
+    .container
+        .box_title.mb_40 Вопросы
         .row
             .col_7
                 .faq_list
@@ -193,21 +217,21 @@ section.faq.pb
                             .faq_item_header Во что UNIQ будет играть?
                             .faq_item_body Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
             .col_3
-                a.btn_default.orange.desktop(href="#modal") Задать вопрос
-                a.btn_default.orange.mobile(href="#modal") У меня остались вопросы
+                a.btn_default.orange.desktop.modal_toggle(href="#faq_modal") Задать вопрос
+                a.btn_default.orange.mobile.modal_toggle(href="#faq_modal") У меня остались вопросы
 
 
 
 
-section.pre_order_bottom.pb
+section.pre_order_bottom.pb#pre_order_bottom
     .container
         .pre_order
             .d_flex
                 .top
-                    .h2 Предзаказ UNIQ
+                    .box_title Предзаказ UNIQ
                 .bottom
                     .price
                         .current_price 25 900 ₽
                         .old_price 55 900 ₽
-                    a.btn_default(href="modal") Предзаказать
+                    a.btn_default.modal_toggle(href="#pre_order_modal") Предзаказать
             .bg

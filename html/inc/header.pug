@@ -1,5 +1,7 @@
 -var menu=['О игрушке','Отзывы','Вопросы'];
+-var menu_link=['about','reviews','faq'];
 -var submenu=['Зачем нужен UNIQ?','Как UNIQ это делает?','Видеообзор','Технические характеристики','Подписка UNIQ','Мобильное приложение'];
+-var submenu_link=['why_need','how_does','video_review','characteristics','subscription','mobile_app'];
 header
     .container
         .m_header
@@ -17,12 +19,12 @@ header
                     ul.menu
                         for menu_item , index in menu
                             li(class=(index===0)? 'has_child': '')
-                                a(href="#")=menu_item
+                                a(href="#"+menu_link[index]+"")=menu_item
                                 if index===0
                                     ul.sub-menu
                                         for sub_item , index in submenu
                                             li
-                                                a(href="#")=sub_item
+                                                a(href="#"+submenu_link[index]+"")=sub_item
                 .col_center
                     .logo
                         a(href="#")
@@ -30,7 +32,7 @@ header
                             img.logo_orange(src=dir+"logo.svg")
                 .col_right
                     .lang_block
-                        button.lang_btn
+                        a.lang_btn(href="#")
                             img.flag(src=dir+'rus.svg')
                             span.txt Ру
 
@@ -44,7 +46,7 @@ header
                                     img.glag(src=dir+'us.svg')
                                     span.txt US
 
-                    a.btn(href="#modal") Предзаказ
+                    a.btn.modal_toggle(href="#pre_order_modal") Предзаказ
 
 
 
