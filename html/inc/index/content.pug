@@ -37,8 +37,9 @@ section.why_need.pb_pt#why_need
 
         .row.why_need_body
             .col_3
-                p С его помощью ребёнок:
-                img(src=dir+"335748.png")
+                .sticky_title1
+                    p С его помощью ребёнок:
+                    img(src=dir+"335748.png")
             .col_7
                 -for(var n=1;n<=4;n++)
                     .why_need_item(class="item"+n+"")
@@ -58,11 +59,11 @@ section.why_need.pb_pt#why_need
                                     p В этом возрасте очень важно научиться распознавать эмоции как в себе, так и в окружающих.
                                     p Уник на своем примере покажет и расскажет об эмоциях, отчего они возникают, как к ним относиться и как с ними справляться.
                         img(src=dir+"why_need/"+n+".gif")
-
+        .end_sticky
 
 -var tooltip=['','Поиграем в съедобное / несъедобное?','Какие животные были в зоопарке сегодня?','Эх, сегодня сильный дождь. Мы не сможем покачаться на любимых качелях :(','Друг, с днем рождения !','Не переживай! Соберем замок еще раз :)','Текст','Поиграем в магазин игрушек?','Добрый доктор Айболит! Он под деревом сидит. Приходи к нему лечиться...','♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪♫ ♪ ♫ ♪'];
 -var slider_txt=['Подстраиваться под возраст ребенка и его интересы','Разговаривать с ребенком на детские темы и рассказывать про себя','Выражать эмоции в зависимости от игры или темы беседы','Запоминать предпочтения ребенка и важные для него вещи и события','Запоминать предпочтения ребенка и важные для него вещи и события','Проявлять сопереживание к ребенку','Отвечать на вопросы “почему” и “как”','Предлагать ребенку поиграть','Рассказывать сказки','Включать музыку'];
-section.block_slider#how_does
+section.block_slider.end_sticky#how_does
     .container
         .box_title <span>Uniq</span> – игровой робот-друг с<br> искусственным интеллектом
         .slider_row
@@ -88,7 +89,7 @@ section.block_slider#how_does
 
 
 
-section.video_review.pb_pt#video_review
+section.video_review.pt#video_review
     .container
         .box_title.mb_40 Видеообзор
         .row
@@ -98,17 +99,17 @@ section.video_review.pb_pt#video_review
                     span “Хей, посмотри видео про меня” (Текст от имени игрушки про ее возможности )
             .col_7
                 .video_container
-                    span.play_btn
-                    video.video(src=dir+'video.mp4')
+                    span.play_btn#play_btn
+                    video#video(src=dir+'video.mp4')
 
 
 -var what_can=['','Общается и распознает детскую речь','Сопровождает игры звуками и музыкой','Изменяет цвет во время игр','Показывает свои эмоции','Реагирует на прикосновения ','Реагирует на нажатия кнопок и уникальные NFC карточки','Распознает лица и объекты через камеру ','Сопровождает игры картинками на экране','Видеоняня'];
 -var w_desc=['','Уник умеет поддерживать беседу на детские темы, отвечать на вопросы и задавать их. ','Игры Уника наполнены красивой музыкой и разнообразными звуками, позволяя глубже окунутся в мир игры.','RGB-подсветка позволяет легче ориентироваться в правилах игры, а также дает дополнительное погружение. ','В процессе общения Уник может проявлять целый спектр эмоций, развивая эмоциональный интеллект','Мурлычет, если его погладить или почесать за ушком','Тактильно взаимодействует с ребенком.','Определяет, если ребенок улыбается или плачет, узнает животных, фигуры и жесты.','С помощью изображений помогает разнообразить игры и глубже погрузиться в сюжет','Ребенок всегда под присмотром родителя через мобильное приложение'];
-section.what_can#characteristics
+section.what_can.pt#characteristics
     .container
         .row
             .col_3
-                .box_title что умеет <span>UNIQ</span>
+                .box_title.sticky_title2 что умеет <span>UNIQ</span>
             .col_7
                 .what_can_list
                     -for(var w=1;w<=9;w++)
@@ -132,7 +133,7 @@ section.what_can#characteristics
 
 
 
-section.prices.pb_pt#subscription
+section.prices.pt#subscription
     .container
         .row
             .col_6
@@ -166,7 +167,7 @@ section.prices.pb_pt#subscription
 
 
 
-section.reviews.pb#reviews
+section.reviews.pb_pt#reviews
     .container
         .box_title.mb_40 Отзывы
         .reviews_list
@@ -206,7 +207,7 @@ section.block_slider#mobile_app
                                     .title Мониторинг активности
                                     .desc Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет
 
-section.faq.pb_pt#faq
+section.faq.pt#faq
     .container
         .box_title.mb_40 Вопросы
         .row
@@ -223,7 +224,7 @@ section.faq.pb_pt#faq
 
 
 
-section.pre_order_bottom.pb#pre_order_bottom
+section.pre_order_bottom.pb_pt#pre_order_bottom
     .container
         .pre_order
             .d_flex

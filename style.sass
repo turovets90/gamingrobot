@@ -1,7 +1,7 @@
 /*!
   Theme Name: gamingrobot
   Theme URI: http://underscores.me/
-  Author: Aleksandr Turavets
+  Author: Aleksandr Turovets
   Author URI: https://www.linkedin.com/in/aleksandr-turovets/
   Description: Description
   Version: 1.0.0
@@ -230,7 +230,7 @@ body
   margin-right: auto
 
 
-body.page
+body#page
   header
     background: #FFF3EB
     .menu
@@ -239,7 +239,7 @@ body.page
           &:hover
             > a
               color: $orange
-        &.has_child
+        &.has_child, &.menu-item-has-children
           @media (min-width: 992px)
             &:hover
               > a
@@ -274,7 +274,9 @@ body.page
         &:after
           background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5L7 7.5L13 1.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
-
+.admin-bar
+  header
+    top: 32px
 header
   //background: #FFF3EB
   +border-radius(0 0 16px 16px)
@@ -301,7 +303,7 @@ header
           &:hover
             > a
               color: $orange
-        &.has_child
+        &.has_child, &.menu-item-has-children
           @media (min-width: 992px)
             &:hover
               > a
@@ -478,7 +480,7 @@ header
 
 
 
-    &.has_child
+    &.has_child, &.menu-item-has-children
       @media (min-width: 992px)
         &:hover
           .sub-menu
@@ -726,6 +728,8 @@ $black: #211D1A
       line-height: 28px
       //color: #000
       margin-bottom: 10px
+    @media (max-width: 375px)
+      font-size: 24px
       .orange
         color: $orange
         @media (max-width: 767px)
@@ -899,6 +903,16 @@ $black: #211D1A
     padding-bottom: 65px
 
 
+.pt
+  padding-top: 140px
+  @media (max-width: 1200px)
+    padding-top: 90px
+  @media (max-width: 991px)
+    padding-top: 70px
+  @media (max-width: 767px)
+    padding-top: 65px
+
+
 .why_need_item
   background: #FF9040
   position: relative
@@ -1031,6 +1045,8 @@ h2, .box_title, .page_title
     font-size: 43px
   @media (max-width: 767px)
     font-size: 32px
+  @media (max-width: 375px)
+    font-size: 25px
   span
     color: $orange
 
@@ -1275,6 +1291,8 @@ h2, .box_title, .page_title
         background-position: center
         @media (max-width: 767px)
           height: 405px
+        img
+          display: none
         &:before
           +b_a
           width: 100%
@@ -1585,6 +1603,8 @@ h2, .box_title, .page_title
     padding: 0 10px
     width: 33.33%
     margin-bottom: 16px
+    @media (max-width: 1200px)
+      width: 50%
     @media (max-width: 767px)
       width: 100%
     .review_item
@@ -1662,6 +1682,11 @@ h2, .box_title, .page_title
     &.desktop
       @media (max-width: 767px)
         display: none
+
+  @media (max-width: 991px)
+    padding-bottom: 70px
+  @media (max-width: 767px)
+    padding-bottom: 65px
 
 .faq_list
   max-width: 1029px
@@ -2187,6 +2212,9 @@ footer
 .modal
   .btn_default
     max-width: 100%
+    &:disabled
+      opacity: 0.7
+      cursor: initial
 .modal_title
   font-size: 32px
   line-height: 1
@@ -2206,6 +2234,21 @@ footer
     margin-bottom: 0
 
 
+  &:focus, &.not_empty
+    label
+      font-size: 12px
+      +transform(translateY(-14px))
+  label
+    position: absolute
+    color: #A2A2A2
+    font-size: 14px
+    line-height: 1
+    left: 16px
+    top: 23px
+    pointer-events: none
+    +transition($transition_default)
+
+
 
 
 .form_control
@@ -2217,19 +2260,7 @@ footer
   color: #000
   font-size: 14px
 
-  &:focus, &.not_empty
-    + label
-      font-size: 12px
-      +transform(translateY(-14px))
-  + label
-    position: absolute
-    color: #A2A2A2
-    font-size: 14px
-    line-height: 1
-    left: 16px
-    top: 23px
-    pointer-events: none
-    +transition($transition_default)
+
 
 
 .agree
@@ -2249,6 +2280,8 @@ footer
       display: inline-block
       padding-left: 27px
       cursor: pointer
+      left: initial
+      top: initial
       &:before
         +b_a
         width: 20px
@@ -2277,7 +2310,7 @@ footer
 
 textarea.form_control
   height: 167px
-  padding-top: 30px
+  padding-top: 20px
   @media (max-width: 1200px)
     height: 140px
   @media (max-width: 767px)
@@ -2301,7 +2334,7 @@ textarea.form_control
       &:hover, &:focus
         text-decoration: underline
 
-.page_404
+.page_404, .error404
   background: #FFF3EB
 
 .content_404
@@ -2346,3 +2379,79 @@ h3, .h3
 
 .page_title
   word-break: break-word
+
+
+.wpcf7-not-valid-tip
+  font-size: 12px
+
+.wpcf7
+  form
+    .wpcf7-response-output
+      margin: 0
+      font-size: 12px
+      line-height: 1.2
+
+
+
+.gif_amination
+  position: relative
+  display: inline-block
+  img
+    +border-radius(32px)
+
+  .watch_video
+    position: absolute
+    left: 24px
+    bottom: 24px
+    color: #000
+    font-size: 14px
+    font-weight: 700
+    background: #fff
+    +flex
+    +ai-center
+    +j-center
+    width: 182px
+    height: 40px
+    +border-radius(40px)
+    text-decoration: none
+    line-height: 1
+    &:hover, &:focus
+      text-decoration: none
+
+    .play
+      display: inline-block
+      width: 24px
+      height: 24px
+      margin-left: 7px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12' cy='12' r='12' fill='%23FF9040'/%3e%3cpath d='M16.8775 13.3107L10.5855 17.8549C9.92416 18.3325 9 17.86 9 17.0442V7.95576C9 7.13999 9.92416 6.66745 10.5855 7.14508L16.8775 11.6893C17.4302 12.0885 17.4302 12.9115 16.8775 13.3107Z' fill='white'/%3e%3c/svg%3e ")
+
+
+@media (min-width: 992px)
+  .sticky_title1, .sticky_title2
+    height: auto !important
+    .sticky
+      position: fixed
+      width: 386px
+      //padding-top: 35px
+    .stop
+      position: relative
+      //padding-top: 35px
+      width: 386px
+
+
+.admin-bar
+
+  @media (min-width: 992px)
+  .sticky_title1, .sticky_title2
+    .sticky
+      padding-top: 32px
+    .stop
+      padding-top: 32px
+
+
+body
+  &.fix
+    //overflow: hidden
+
+
+

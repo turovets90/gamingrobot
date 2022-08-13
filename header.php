@@ -20,40 +20,61 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="<?php echo(is_front_page())?'home':'page' ?>">
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'gamingrobot' ); ?></a>
+<header>
+    <div class="container">
+        <div class="m_header">
+            <div class="logo"><a href="/"><img src="<?php the_field('logotip_oranzhevyj',14); ?>"/></a></div>
+            <div class="mm_btn">
+                <button class="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <div class="mm_menu">
+            <div class="header_row">
+                <div class="col_left">
+                    <?php
+                    wp_nav_menu( [
+                        'menu'            => 'header_menu',
+                        'container'       => '',
+                        'menu_class'      => 'menu',
+                    ] );
+                    ?>
+                </div>
+                <div class="col_center">
+                    <div class="logo">
+                        <a href="/">
+                            <img class="logo_white" src="<?php the_field('logotip_belyj',14); ?>"/>
+                            <img class="logo_orange" src="<?php the_field('logotip_oranzhevyj',14); ?>"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col_right">
+                    <div class="lang_block">
+                        <a class="lang_btn" href="#">
+                            <img class="flag" src="<?php echo get_template_directory_uri(); ?>/img/rus.svg"/>
+                            <span class="txt">Ру</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <img class="glag" src="<?php echo get_template_directory_uri(); ?>/img/esp.svg"/>
+                                    <span class="txt">Es</span>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <img class="glag" src="<?php echo get_template_directory_uri(); ?>/img/us.svg"/>
+                                    <span class="txt">US</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><a class="btn modal_toggle" href="#pre_order_modal"><?php the_field('knopka_predzakaz',14); ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$gamingrobot_description = get_bloginfo( 'description', 'display' );
-			if ( $gamingrobot_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $gamingrobot_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gamingrobot' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+
