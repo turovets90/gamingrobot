@@ -139,7 +139,7 @@
         <div class="end_sticky"></div>
       </div>
     </section>
-    <section class="block_slider end_sticky" id="how_does">
+    <section class="block_slider" id="how_does">
       <div class="container">
         <div class="box_title"><span>Uniq</span> – игровой робот-друг с<br> искусственным интеллектом</div>
         <div class="slider_row">
@@ -461,65 +461,28 @@
         </div>
       </div>
     </section>
-    <section class="block_slider" id="mobile_app">
-      <div class="container">
-        <div class="box_title">мобильное приложение <span class="d_block">для родителей</span></div>
-        <div class="slider_row">
-          <div class="col">
-            <div class="slider_image_container">
-              <div class="slider_image">
-                <div class="item">
-                  <div class="slider_image_item">
-                    <picture><img src="../img/mob_app.png"/></picture>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="slider_txt_container">
-              <div class="slider_txt">
-                <div class="item">
-                  <div class="slider_txt_item">
-                    <div class="count">1</div>
-                    <div class="title">Мониторинг активности</div>
-                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slider_txt_item">
-                    <div class="count">2</div>
-                    <div class="title">Мониторинг активности</div>
-                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slider_txt_item">
-                    <div class="count">3</div>
-                    <div class="title">Мониторинг активности</div>
-                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slider_txt_item">
-                    <div class="count">4</div>
-                    <div class="title">Мониторинг активности</div>
-                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="slider_txt_item">
-                    <div class="count">5</div>
-                    <div class="title">Мониторинг активности</div>
-                    <div class="desc">Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!--section.block_slider#mobile_app
+    .container
+        .box_title мобильное приложение <span class="d_block">для родителей</span>
+        .slider_row
+            .col
+                .slider_image_container
+                    .slider_image
+                        .item
+                            .slider_image_item
+                                picture
+                                    img(src=dir+"mob_app.png")
+            .col
+                .slider_txt_container
+                    .slider_txt
+                        -for(var i=1;i<=5;i++)
+                            .item
+                                .slider_txt_item
+                                    .count=i
+                                    .title Мониторинг активности
+                                    .desc Видит активность своего ребёнка – его любимые игры, что у него получается, а что - нет
+    
+    -->
     <section class="faq pt" id="faq">
       <div class="container">
         <div class="box_title mb_40">Вопросы</div>
